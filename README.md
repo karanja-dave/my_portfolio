@@ -18,4 +18,26 @@ It highlights my education, skills, projects, and experiences while showcasing t
 - **Font Awesome**:for icons  
 
 ---
+
+
+---
+
+## 🌐 Deployment  
+The **portfolio** can be deployed on:  
+- [GitHub Pages](https://pages.github.com/)  
+- [Netlify](https://www.netlify.com/)  
+- [Vercel](https://vercel.com/)  
+
+---
+
+## 📸 Features  
+- Responsive design  
+- Portfolio cards (projects, skills, and experience)  
+- Beginner-friendly code structure  
+
+---
+
+## 🙌 Acknowledgements  
+Special thanks to **Teach2Give** for guiding me during my training and helping me build this portfolio from scratch.  
+
   
