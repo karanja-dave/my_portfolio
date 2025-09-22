@@ -26,11 +26,12 @@ The **portfolio** can be deployed on:
 ## 📸 Features  
 - Responsive design  
 - Portfolio cards (projects, skills, and experience)  
-- Beginner-friendly code structure  
+- Contact Forms  
 
 ---
 
 ## 🙌 Acknowledgements  
-Special thanks to **Teach2Give** for guiding me during my training and helping me build this portfolio from scratch.  
-
+Special thanks to **Teach2Give** for the opportunity and resources provided,  
+and to our trainer [**Brian Kemboi**](https://github.com/kemboi590) for his dedication, competency,  
+and simplicity in his work, which made the learning experience impactful.
   
