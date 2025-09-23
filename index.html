@@ -32,52 +32,61 @@
          
 
          <!-- welcome section -->
-          <main>
+        <main>
             <section>
-                <!-- welcome text -->
-                <div class="desc">
+                 <div id="welcome">
+                    <!-- welcome text -->
+                    <div class="desc">
                     <h1>Hello, <span style="color: aqua;">I'm Dave Karanja</span></h1>
                     <h2>QA & QE Trainee</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                          Minima consequatur sunt placeat eaque impedit libero perspiciatis odit iste dolorum. <br>
                           Esse ex vero nam nesciunt a sed voluptatum obcaecati consequuntur omnis.</p>
-                </div>
+
+                    <!-- get in touch button -->
+                     <a href="#Contact"><button>Let's Connect</button></a>
+                    </div>
                 
                 <!-- profile-pic -->
-                 <div>
-                    <img src="" alt="Profile Pic">
+                    <div class="prof-pic">
+                        <img src="./images/hero-image.jpg" alt="Profile Pic">
+                    </div>
                  </div>
+                
 
             </section>
-          </main>
+
+        </main>
           <!-- abt education experience projects & skills section -->
-           <section>
+        <section>
             <!-- abt -->
             <div class="about">
                 <!-- abt-txt -->
                 <div class="about-desc">
                     <h2>About Me</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam quis quod temporibus. Nemo dicta odit, corrupti soluta magnam deleniti maxime accusantium nesciunt repudiandae ad animi voluptate iure quisquam ipsum quo.</p>
+                    <!-- cv button -->
+                     <a href="#"><button>Resume</button></a>
                 </div>
                 <!-- what i do -->
                 <div class="what-i-do">
                 <h2>What I Do</h2>
                 <div class="abt-card">
-                    <!-- Card 1 -->
+                    <!-- software dvlpt -->
                     <div class="card">
                         <i class="fa-solid fa-code fa-2x" style="color: #63E6BE;"></i>
                         <h4>Software Development</h4>
                         <p>I build responsive and efficient applications using modern technologies, focusing on creating intuitive user experiences.</p>
                     </div>
 
-                    <!-- Card 2 -->
+                    <!-- QA -->
                     <div class="card">
                         <i class="fa-solid fa-vial-circle-check fa-2x" style="color: #63E6BE;"></i>
                         <h4>QA Testing</h4>
                         <p>Ensuring product quality through thorough testing and debugging to deliver reliable software solutions.</p>
                     </div>
 
-                    <!-- Card 3 -->
+                    <!-- model builds -->
                     <div class="card">
                         <i class="fa-solid fa-brain fa-2x" style="color: #63E6BE;"></i>
                         <h4>Model Building</h4>
@@ -96,33 +105,60 @@
                     <div class="card"></div>
                 </div>
             </div>
+
             <!-- experience -->
             <div class="experience">
-                <h2>Experience</h2>
-                <div class="exp-card">
-                    <!-- teach2give training -->
-                    <div class="card"> 
-                        <div class="head"> 
-                            <h4 class="org">Teach2Give</h4>
-                            <p class="post">QA&QE Trainee</p>
-                            <div class="info">
-                                <p class="period">Sep 2024 - Dec 2024</p>
-                                <p class="location">Nyeri</p>
-                            </div>
-                        </div>
-                    </div>
+            <h2>Experience</h2>
+            <!-- org names on left -->
 
-                    <!-- nssf attachment -->
-                     <div class="card">
-                        <div class="class">
-                            h4.org
-                        </div>
-                     </div>
-                   
+             <!-- teach2give -->
+            <div class="org-name">
+            <button class="active">
+                <img src="./images/teach2give.jpeg" alt="Teach2Give Logo">
+                <span>Teach2Give</span>
+            </button>
+            <!-- nsss -->
+            <button>
+                <img src="./images/nssf-image.png" alt="NSSF Logo">
+                <span>NSSF</span>
+            </button>
+
+            <button>
+                <img src="images/other.png" alt="Other Logo">
+                <span>Other Org</span>
+            </button>
+            </div>
 
 
+            <!-- Right column: details -->
+            <div class="exp-det" style="display:block;">
+                <h4>QA & QE Trainee <span>@ Teach2Give</span></h4>
+                <p class="period">Sep 2025 - Dec 2025 | Nyeri, Kenya</p>
+                <ul>
+                <li>Worked on QA testing for web apps.</li>
+                <li>Improved workflows with dev team.</li>
+                </ul>
+            </div>
+
+            <div class="exp-det" style="display:none;">
+                <h4>Investment Attaché <span>@ NSSF</span></h4>
+                <p class="period">Sep 2024 - Dec 2024 | Nairobi, Kenya</p>
+                <ul>
+                <li>Supported investment research projects.</li>
+                <li>Prepared financial analysis reports.</li>
+                </ul>
+            </div>
+
+                <div class="exp-det" style="display:none;">
+                    <h4>Another Role <span>@ Another Org</span></h4>
+                    <p class="period">Jan 2023 - Jun 2023 | Remote</p>
+                    <ul>
+                    <li>Example bullet point here.</li>
+                    <li>Another contribution listed here.</li>
+                    </ul>
                 </div>
             </div>
+
             <!-- projects -->
             <div class="projects"></div>
             <!-- skills -->
@@ -134,5 +170,32 @@
              <div class="contacts"></div>
              <!-- contact form -->
              <div class="form"></div>
+        
+        </section>
+
+        <!-- js for experience section -->
+        <script>
+            // Select all company buttons
+            const tabs = document.querySelectorAll(".org-name button");
+            const details = document.querySelectorAll(".exp-det");
+
+            // Loop through buttons
+            tabs.forEach((tab, index) => {
+            tab.addEventListener("click", () => {
+                // Remove active state from all buttons
+                tabs.forEach(btn => btn.classList.remove("active"));
+                // Hide all details
+                details.forEach(detail => detail.style.display = "none");
+
+                // Activate clicked tab
+                tab.classList.add("active");
+                details[index].style.display = "block";
+            });
+            });
+
+        </script>
+
+
+             
     </body>
 </html>
