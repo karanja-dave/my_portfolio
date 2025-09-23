@@ -1,7 +1,7 @@
 /* global styling */
 *{
     padding: 0 7px;
-    /* background-color: #f0f8ff; */
+    background-color: #f0f8ff;
 }
 
 /* style for 2nd headers */
@@ -9,6 +9,12 @@ h2 {
     font-size: 24px;
     color: #555;
     padding: 0 0;
+}
+
+h2:hover {
+  color: black;
+  /* background-color: transparent; makes sure no background shows */
+  border: none; /* in case your h2 has a border */
 }
 
 /* style for pragarphs */
@@ -38,12 +44,7 @@ button:hover {
 /* card style */
 .card{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.45);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card i {
@@ -63,6 +64,11 @@ button:hover {
   line-height: 1.5;
 }
 
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+}
 
 
 /* Welcome section */
@@ -130,7 +136,7 @@ h1 {
   justify-content: center;   
   align-items: flex-start;   
   gap: 30px;
-  margin: 60px auto;  /*centers whole container*/
+  margin: 60px auto;  /*center whole container*/
   max-width: 900px;  
   padding: 0 20px; 
 }
@@ -138,19 +144,23 @@ h1 {
 .org-name {
   display: flex;
   flex-direction: column;
-  border-left: 2px solid #ccc; /* vertical line */
+  border-left: 2px solid #ccc; 
   min-width: 180px;
 }
 
 .org-name button {
+    display: flex;
   background: none;
   border: none;
   padding: 12px 20px;
-  text-align: left;
+  text-align: center;     
   cursor: pointer;
   font-size: 16px;
   color: #555;
   transition: all 0.3s ease;
+  align-items: center;
+  gap: 8px;   
+  margin: 15px;            
 }
 
 .org-name button:hover {
@@ -160,34 +170,21 @@ h1 {
 .org-name button.active {
   color: #000;
   font-weight: 600;
-  border-left: 3px solid #007acc; /* highlight */
+  border-left: 3px solid #007acc; 
   background: rgba(0,0,0,0.03);
 }
 
-
-.org-name button {
-  background: none;
-  border: none;
-  padding: 15px 20px;
-  text-align: center;     /* center logo + name */
-  cursor: pointer;
-  font-size: 16px;
-  color: #555;
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column; /* stack logo on top of text */
-  align-items: center;
-  gap: 8px;               /* space between logo & name */
-}
-
 .org-name button img {
-  width: 40px;   /* adjust as needed */
+  width: 40px;   
   height: 40px;
   object-fit: contain;
 }
 
 
+
+
 .exp-det {
+  display: block;
   flex: 1;
 }
 
@@ -218,6 +215,63 @@ h1 {
   position: absolute;
   left: 0;
   color: #007acc;
+}
+
+/* projects section */
+.proj-card .card {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 16px;
+  margin: 30px 0;
+  /* background: #fff; */
+  max-width: 100%;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  font-size: 24px;
+}
+
+.links a {
+  margin-left: 8px;
+  text-decoration: none;
+  color: #0077cc;
+  font-size: 14px;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.proj-card .card h3 {
+  margin: 12px 0 8px;
+  font-size: 20px;
+}
+
+.proj-card .card h3:hover {
+  color: #0077cc;
+}
+
+.tools {
+  list-style: none;
+  padding: 0;
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tools li {
+  background: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
 }
 
 
