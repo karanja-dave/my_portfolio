@@ -454,7 +454,7 @@ footer {
 }
 
 .footer .links a {
-  color: #black;
+  color: black;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -470,7 +470,7 @@ footer {
 }
 
 .socials a {
-  color: #black;
+  color: black;
   font-weight: bold;
   text-decoration: none;
   transition: color 0.3s;
@@ -551,7 +551,7 @@ copyright {
 /* Responsive design for experience section */
 @media (max-width: 1024px) {
   .experience {
-    flex-direction: column;    /* stack items vertically */
+    flex-direction: column;    /* align items vertically */
     align-items: center;       /* center everything */
     text-align: center;
   }
@@ -570,14 +570,69 @@ copyright {
   }
 
   .org-name button {
-    margin: 10px 0;            /* spacing between buttons */
-    width: 200px;              /* optional: keep consistent width */
+    margin: 10px 0;            
+    width: 200px;              
     justify-content: center;   /* center text + icons */
   }
 
   .exp-det {
-    text-align: left;          /* keep descriptions aligned properly */
+    text-align: left;          /* align text to left*/
     width: 100%;               /* expand details block */
   }
 }
+
+
+
+@media (max-width: 720px) {
+
+  /* what i do */
+  .abt-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .abt-card .card {
+    width: 90%;
+    padding: 15px;
+  }
+
+  /* education */
+  .ed-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ed-card .card {
+    width: 90%;
+    padding: 15px;
+  }
+
+  /* projects */
+  .proj-card .card {
+    flex-direction: column-reverse;   
+    align-items: center;
+    text-align: center;
+  }
+
+  .proj-image img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  /* skills */
+  .skills {
+    justify-content: center;
+  }
+
+  .skill {
+    width: 100px;
+    padding: 10px;
+  }
+}
+
 
