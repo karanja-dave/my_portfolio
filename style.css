@@ -511,6 +511,10 @@ copyright {
     display: flex;
   }
 
+  .burger{ /*to display nav bar*/
+    display: flex;
+  }
+
   #welcome{
     flex-direction: column-reverse;
     align-items: center;
