@@ -11,10 +11,15 @@
         <!-- navigation bar -->
          <header>
             <nav>
-            <ul>
+                <div class="nav-container">
+                    <div class="burger" id="burger"><i class="fa-solid fa-bars"></i></div>
+                    <div class="close" id="close"><i class="fa-solid fa-circle-xmark"></i></div>
+                    
+                </div>
+            <ul class="nav-links" id="navLinks">
                 <!-- logo -->
                 <div>
-                    <p class="logo">Dave Karanja</p>
+                    <span class="logo">Dave Karanja</span>
                 </div>
                 <!-- explore -->
                 <li><a href="#Welcome">Home</a></li>
@@ -45,7 +50,7 @@
                      <a href="#contacts"><button>Let's Connect</button></a>
                     </div>
                 
-                <!-- profile-pic -->
+                    <!-- profile-pic -->
                     <div class="prof-pic">
                         <img src="./images/profi-pic.jpg" alt="Profile Pic">
                     </div>
@@ -158,8 +163,10 @@
                     <h4>QA & QE Trainee </h4>
                     <p class="period">Sep 2025 - Dec 2025 | Nyeri, Kenya</p>
                     <ul>
-                    <li>list 1.</li>
-                    <li>list 2.</li>
+                    <li>Currently undertaking foundational training in web development, covering both front-end and back-end technologies.</li>
+                    <li>Learning the fundamentals of HTML, CSS, and JavaScript to build responsive user interfaces.</li>
+                    <li>Preparing for software testing by starting with manual methods and progressing into automation tools</li>
+                    <li>Building teamwork and problem-solving skills through collaborative projects and practical exercises.</li>
                     </ul>
                 </div>
 
@@ -167,8 +174,9 @@
                     <h4>Investment Attache</h4>
                     <p class="period">Sep 2024 - Dec 2024 | Nairobi, Kenya</p>
                     <ul>
-                    <li>list 1.</li>
-                    <li>list 2.</li>
+                    <li>Strengthened communication skills through regular client interactions and professional correspondence.</li>
+                    <li>Enhanced technical proficiency by improving Excel expertise, learning SAP software, and preparing financial reports and summaries.</li>
+                    <li>Gained practical exposure in investment and finance concepts while also drafting legal documents to support organizational operations.</li>
                     </ul>
                 </div>
 
@@ -176,8 +184,9 @@
                     <h4>Applied Data Science<span></span></h4>
                     <p class="period">Jan 2025 - Jun 2025 | Remote</p>
                     <ul>
-                    <li>list 1.</li>
-                    <li>list 2.</li>
+                    <li>Completed the Applied Data Science course, working on 8 projects that addressed real world problems in housing, environment, finance, and risk analysis.</li>
+                    <li>Applied techniques such as data cleaning, visualization, regression, clustering, time-series forecasting, and statistical testing using Python, SQL, and MongoDB.</li>
+                    <li>Built models to analyze, predict, and interpret outcomes, and deployed solutions including a web API for volatility forecasting.</li>
                     </ul>
                 </div>
             </div>
@@ -356,6 +365,31 @@
             </div>
     </footer>
 
+
+        <!-- js for nav bar  -->
+        <script>
+            const burger=document.getElementById('burger')
+            const close=document.getElementById('close')
+            const navLinks=document.getElementById('navLinks')
+
+            // show menu
+            burger.addEventListener('click',()=>{
+                navLinks.classList.add('show')
+                burger.style.display='none'
+                close.style.display='block'
+
+            })
+
+            // hide the menu
+            close.addEventListener('click',()=>{
+                navLinks.classList.remove('show')
+                burger.style.display='block'
+                close.style.display='none'
+            })
+
+            close.style.display='none'
+
+        </script>
 
 
 

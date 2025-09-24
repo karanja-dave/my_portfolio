@@ -5,6 +5,47 @@
     
 }
 
+
+/* navigation bar */
+.nav-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f8ff;
+  padding: 10px 20px;
+}
+
+.burger, .close{
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000;
+  padding: 15px;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: whitesmoke;
+  padding: 10px 20px;
+}
+
+.nav-links li{
+  list-style: none;
+}
+
+.nav-links li a:hover{
+  color: #000;
+}
+.nav-links li a{
+  color: #00ccff;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+
+
 /* style for 2nd headers */
 h2 {
     font-size: 24px;
@@ -451,8 +492,88 @@ copyright {
 
 @media screen  and (max-width:1024px) {
 
+  .logo{
+    display: none;
+  }
+
+  .nav-links{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+    top: 60px;
+    left: 0;
+    right: 0;
+  }
+
+  .nav-links.show{
+    display: flex;
+  }
+
   #welcome{
     flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+  }
+
+  .desc{
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  h1{
+    font-size: 30px;
+  }
+
+  h2{
+    font-size: 18;
+  }
+
+  .prof-pic{
+    width: 100%;
+    padding: 0 20px;
   }
   
+  .skill {
+  width: 100px;
+  }
+
+
+  
 }
+
+
+/* Responsive design for experience section */
+@media (max-width: 1024px) {
+  .experience {
+    flex-direction: column;    /* stack items vertically */
+    align-items: center;       /* center everything */
+    text-align: center;
+  }
+
+  .experience h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .org-name {
+    border-left: none;         /* remove left border */
+    display: flex;
+    flex-direction: row;
+    align-items: center;       /* center buttons */
+    margin-bottom: 20px;
+  }
+
+  .org-name button {
+    margin: 10px 0;            /* spacing between buttons */
+    width: 200px;              /* optional: keep consistent width */
+    justify-content: center;   /* center text + icons */
+  }
+
+  .exp-det {
+    text-align: left;          /* keep descriptions aligned properly */
+    width: 100%;               /* expand details block */
+  }
+}
+
